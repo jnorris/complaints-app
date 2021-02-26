@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaints App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Where can we cause trouble today?</h1>
+        <form>
+            <input id="numComplaints" type="text" placeholder="# of complaints">
+            <button class="borough">Brooklyn</button>
+            <button class="borough">Manhattan</button>
+            <button class="borough">Queens</button>
+            <button class="borough">Bronx</button>
+            <button class="borough">Staten Island</button>
+        </form>
+    </header>
+    <div id="error"></div>
+    <main>
+    </main>
+
+    <template>
+        <div class="complaint">
+            <div>
+                <img class="siren" src="img/siren.svg">
+                <span class="descriptor">Test</span>
+                <button class="showResponse">What did the police do?</button>
+            </div>
+            <div class="response"></div>
+        </div>
+    </template>
+</body>
+</html>

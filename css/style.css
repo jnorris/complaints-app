@@ -1,0 +1,17 @@
+header h1, header form {
+    text-align: center;
+}
+
+img.siren {
+    width: 1em;
+    height: 1em;
+    padding-right: 0.5em;
+}
+
+.complaint button {
+    /* background: red; */
+}
+
+.complaint .response {
+    display: none;
+}
