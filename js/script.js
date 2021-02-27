@@ -1,3 +1,5 @@
+'use strict';
+
 const API_KEY = "4kcktzofs9lgd2qs6orh5wxnd";
 const APP_TOKEN = "VfD86P4U8LBH4MZI7WKthCXqD";
 
@@ -36,11 +38,13 @@ function search() {
         console.log(data);
         complaintData = data;
         complaintError = null;
+        render();
     }, (error) => {
         console.log(error);
         complaintData = null;
         complaintError = error;
-    }).done(render);
+        render();
+    });
     
 }
 
