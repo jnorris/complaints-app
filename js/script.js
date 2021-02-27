@@ -19,7 +19,7 @@ $("form").on("click", "button", (event) => {
 });
 
 $("main").on("click", "button.showResponse", (event) => {
-    $(event.target).closest(".complaint").find(".response").toggle();
+    $(event.target).closest(".complaint").find(".response").slideToggle(200);
 });
 
 function search() {
@@ -32,8 +32,7 @@ function search() {
             "$limit": numComplaints,
             "$$app_token": APP_TOKEN
         }
-    }).then(function(data) {
-        //alert("Retrieved " + data.length + " records from the dataset!");
+    }).then((data) => {
         console.log(data);
         complaintData = data;
         complaintError = null;

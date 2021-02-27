@@ -5,7 +5,7 @@ header h1, header form {
 img.siren {
     width: 1em;
     height: 1em;
-    /* padding-right: 0.5em; */
+    padding: 0 0.5em;
 }
 
 main {
@@ -13,10 +13,22 @@ main {
     margin: 1em auto;
 }
 
+
+.complaint > .line {
+    display: flex;
+    flex-flow: row;
+}
+
+.complaint > .line > .descriptor {
+    flex-grow: 1;
+}
+
 .complaint button {
+
     /* background: red; */
 }
 
 .complaint .response {
     display: none;
+    margin: 0 2em;
 }
