@@ -36,20 +36,23 @@ function search() {
         console.log(data);
         complaintData = data;
         complaintError = null;
-        render();
     }, (error) => {
         console.log(error);
         complaintData = null;
         complaintError = error;
-    });
+    }).done(render);
     
 }
 
 function render() {
-    $main.empty();
-    $error.empty();
+    $main.empty().hide();
+    $error.empty().hide();
     if (complaintError) {
-        $error.text(complaintError);
+        let errorText = complaintError.statusText;
+        if (complaintError.responseJSON) {
+            errorText += ": " + complaintError.responseJSON.message;
+        }
+        $error.text(errorText).slideDown(200);
     }
     if (complaintData) {
         for (let i = 0; i < complaintData.length; ++i) {
@@ -60,6 +63,7 @@ function render() {
             $row.find(".response").text(row.resolution_description);
             $main.append($row);
         }
+        $main.slideDown(200);
     }
 }
 

@@ -32,3 +32,8 @@ main {
     display: none;
     margin: 0 2em;
 }
+
+#error {
+    display: none;
+    background: yellow;
+}
